@@ -1,7 +1,7 @@
 import facebookLogo from "../assets/icons/FB.svg";
 import twitterLogo from "../assets/icons/TW.svg";
 import instagramLogo from "../assets/icons/INST.svg";
-import hektoLogo from "../assets/logo.png";
+import hektoLogo from "../assets/Logo.png";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 
