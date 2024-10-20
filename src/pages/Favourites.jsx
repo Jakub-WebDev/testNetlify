@@ -7,7 +7,7 @@ export default function Favourites() {
   const [favouritesProducts, setFavouritesProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://7ce9-195-191-163-209.ngrok-free.app/products")
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching data:", error));

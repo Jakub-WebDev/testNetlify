@@ -8,7 +8,9 @@ export default function Cart() {
   const [subtotal, setSubtotal] = useState(0);
 
   const fetchCartItems = async () => {
-    const response = await fetch("http://localhost:5000/cart");
+    const response = await fetch(
+      "https://7ce9-195-191-163-209.ngrok-free.app/cart"
+    );
     const data = await response.json();
     setCartItems(data);
     calculateSubtotal(data);
@@ -66,7 +68,7 @@ export default function Cart() {
   };
 
   const updateCartItem = async (id, quantity) => {
-    await fetch(`http://localhost:5000/cart/${id}`, {
+    await fetch(`https://7ce9-195-191-163-209.ngrok-free.app/cart/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -76,7 +78,7 @@ export default function Cart() {
   };
 
   const deleteCartItem = async (id) => {
-    await fetch(`http://localhost:5000/cart/${id}`, {
+    await fetch(`https://7ce9-195-191-163-209.ngrok-free.app/cart/${id}`, {
       method: "DELETE",
     });
   };
@@ -84,14 +86,19 @@ export default function Cart() {
   const clearCart = async () => {
     try {
       // Fetch all items currently in the cart
-      const response = await fetch("http://localhost:5000/cart");
+      const response = await fetch(
+        "https://7ce9-195-191-163-209.ngrok-free.app/cart"
+      );
       const cartItems = await response.json();
 
       // Loop through each cart item and send a DELETE request
       for (const item of cartItems) {
-        await fetch(`http://localhost:5000/cart/${item.id}`, {
-          method: "DELETE",
-        });
+        await fetch(
+          `https://7ce9-195-191-163-209.ngrok-free.app/cart/${item.id}`,
+          {
+            method: "DELETE",
+          }
+        );
       }
 
       setCartItems([]);

@@ -17,7 +17,7 @@ const useFavourite = () => {
     dispatch(updateProductFavourite({ id, favourite: newFavouriteStatus }));
 
     // Make a PUT request to update the server
-    fetch(`http://localhost:5000/products/${id}`, {
+    fetch(`https://7ce9-195-191-163-209.ngrok-free.app/products/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

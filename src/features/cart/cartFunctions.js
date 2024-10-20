@@ -2,7 +2,9 @@
 export const addToCart = async (product) => {
   try {
     // Fetch the current cart items
-    const response = await fetch("http://localhost:5000/cart");
+    const response = await fetch(
+      "https://7ce9-195-191-163-209.ngrok-free.app/cart"
+    );
     const cartItems = await response.json();
 
     // Check if the product is already in the cart
@@ -13,7 +15,7 @@ export const addToCart = async (product) => {
     }
 
     // Add the product to the cart
-    await fetch("http://localhost:5000/cart", {
+    await fetch("https://7ce9-195-191-163-209.ngrok-free.app/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

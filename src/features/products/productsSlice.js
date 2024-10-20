@@ -4,7 +4,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
-    const response = await fetch("http://localhost:5000/products");
+    const response = await fetch(
+      "https://7ce9-195-191-163-209.ngrok-free.app/products"
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch products");
     }

@@ -5,7 +5,9 @@ export default function Chair() {
   const addToCart = async () => {
     try {
       // Check if the item is already in the cart
-      const response = await fetch("http://localhost:5000/cart?id=41");
+      const response = await fetch(
+        "https://7ce9-195-191-163-209.ngrok-free.app/cart?id=41"
+      );
       const cartItems = await response.json();
 
       if (cartItems.length > 0) {
@@ -24,13 +26,16 @@ export default function Chair() {
       };
 
       // Post the new cart item to the server
-      const addResponse = await fetch("http://localhost:5000/cart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newCartItem),
-      });
+      const addResponse = await fetch(
+        "https://7ce9-195-191-163-209.ngrok-free.app/cart",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newCartItem),
+        }
+      );
 
       if (addResponse.ok) {
         console.log("Item added to the cart successfully");
