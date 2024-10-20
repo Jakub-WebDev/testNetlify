@@ -1,0 +1,16 @@
+.smallButton {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.smallButton:hover {
+  background-color: #e5e0fc;
+}

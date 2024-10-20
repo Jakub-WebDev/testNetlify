@@ -1,0 +1,153 @@
+.relatedContainer {
+  position: relative;
+  width: 100%;
+  max-width: 192rem;
+  margin: auto;
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 75.6rem;
+}
+
+.relatedTitle {
+  text-align: center;
+  color: #101750;
+  font-weight: 700;
+  font-size: 4.4rem;
+}
+
+.relateds {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.related {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+}
+
+.relatedContent:hover {
+  transform: translateY(-24px);
+  box-shadow: 8px 64px 80px -16px #10175026;
+}
+
+.relatedContent {
+  width: 30.4rem;
+  height: 36.8rem;
+  margin-top: 7.2rem;
+  box-shadow: 8px 24px 32px -16px #10175026;
+  transition: all 0.5s;
+}
+
+.smallButtons {
+  display: flex;
+  position: absolute;
+  width: 11.2rem;
+  margin: 0.8rem 0.8rem;
+}
+
+.smallButton {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.smallButton:hover {
+  background-color: #e5e0fc;
+}
+
+.details {
+  text-decoration: none;
+  width: 10.1rem;
+  height: 3.6rem;
+  margin-top: 19.1rem;
+  margin-left: 10.1rem;
+  position: absolute;
+  background-color: #0cc562;
+  color: #ffffff;
+  padding: 1.1rem 1.6rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.dots {
+  text-align: center;
+  margin-bottom: 10rem;
+  margin-top: 6rem;
+}
+
+.dot {
+  height: 0.4rem;
+  width: 1.6rem;
+  margin: 0 0.8rem;
+  background-color: #febad7;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+  border-radius: 1rem;
+}
+
+.dot.active {
+  background-color: #fb2e86;
+  width: 2.4rem;
+}
+
+.image {
+  width: 100%;
+  height: 23.2rem;
+  border-radius: 0.4rem;
+}
+
+.title {
+  color: #fb2e86;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 2.4rem;
+}
+
+.code {
+  color: #8a8fb9;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.price {
+  color: #101750;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.smallButtons,
+.details {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.relatedContent:hover .smallButtons,
+.relatedContent:hover .details {
+  visibility: visible;
+  opacity: 1;
+}
+
+.purpleHeart path {
+  fill: #7e33e0;
+}
+
+.redHeart path {
+  fill: red;
+}

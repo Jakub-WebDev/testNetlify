@@ -1,0 +1,33 @@
+.subscribe {
+  height: 43.2rem;
+  background-image: url(../assets/subscribe.png);
+  margin-top: 0;
+}
+
+.title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: #101750;
+  margin-left: 57.6rem;
+  padding-top: 11.2rem;
+  width: 76.8rem;
+  text-align: center;
+}
+
+.button {
+  width: 15.1rem;
+  height: 5.2rem;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: #fb2e86;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 6rem;
+  margin-left: 88.45rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e02777;
+}

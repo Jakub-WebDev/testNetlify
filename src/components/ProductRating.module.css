@@ -1,0 +1,12 @@
+.productRating {
+  margin-top: 0.8rem;
+  height: 1.6rem;
+}
+
+.productRating svg {
+  margin-right: 0.8rem;
+}
+
+figure {
+  margin-inline-start: 0;
+}

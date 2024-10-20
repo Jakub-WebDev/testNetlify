@@ -1,0 +1,110 @@
+.discountContainer {
+  width: 100%;
+  height: 89.4rem;
+  position: relative;
+}
+
+.navigation {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.navigation button {
+  background-color: transparent;
+  font-family: "Lato", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #101750;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  color: #fb2e86;
+}
+
+.navigation button:not(:last-child) {
+  margin-right: 3.2rem;
+}
+
+.title {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: #101750;
+}
+
+.discountContent {
+  margin-top: 13.95rem;
+  margin-left: 30.4rem;
+  width: 64rem;
+  height: 34.1rem;
+}
+
+.contentTitle {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #101750;
+}
+
+.contentName {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fb2e86;
+  margin-top: 2.4rem;
+}
+
+.discountContent p {
+  font-family: "Lato", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 2.4rem;
+}
+
+.discountContent ul {
+  margin-top: 2.4rem;
+  list-style: none;
+  width: 60rem;
+  columns: 2;
+  column-gap: 3.2rem;
+  padding-inline-start: 0;
+}
+
+.discountContent li {
+  color: #8a8fb9;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+
+.discountContent svg {
+  margin-right: 0.8rem;
+}
+
+.contentButton {
+  width: 15.6rem;
+  height: 5.2rem;
+  border-radius: 0.8rem;
+  display: block;
+  text-decoration: none;
+  padding-top: 1.6rem;
+  margin-top: 2.4rem;
+  background-color: #fb2e86;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+.contentButton:hover {
+  background-color: #dd2977;
+}
+
+.discountImage {
+  position: absolute;
+  top: 17.6rem;
+  left: 105.6rem;
+  width: 63.8rem;
+  height: 56.8rem;
+}

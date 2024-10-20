@@ -1,0 +1,117 @@
+.detailsPage {
+  height: 63.8rem;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.littleImages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-right: 3.2rem;
+}
+
+.littleImages img {
+  width: 19.2rem;
+  height: 13.6rem;
+  border-radius: 0.8rem;
+}
+
+.image {
+  width: 52.8rem;
+  height: 43.8rem;
+  border-radius: 0.8rem;
+}
+
+.detailsDetails {
+  margin-top: 4rem;
+  margin-left: 14.4rem;
+}
+
+.name {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #0d134e;
+}
+
+.rating {
+  margin-top: 0.8rem;
+}
+
+.prices {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10.9rem;
+}
+
+.price {
+  color: #101750;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.oldPrice {
+  color: #fb2e86;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.productDetails {
+  font-family: "Lato", serif;
+  width: 41.3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #a9acc6;
+}
+
+.buttons {
+  margin-top: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.cartButton {
+  border: none;
+  background-color: #fb2e86;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 17.1rem;
+  height: 5.2rem;
+  border-radius: 0.8rem;
+  margin-right: 3.2rem;
+  cursor: pointer;
+}
+
+.cartButton:hover {
+  background-color: #e22979;
+}
+
+.smallButton {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.blackHeart path {
+  fill: #101750;
+}
+
+.redHeart path {
+  fill: red;
+}

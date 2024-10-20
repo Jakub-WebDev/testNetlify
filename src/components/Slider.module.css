@@ -1,0 +1,111 @@
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 192rem;
+  margin: auto;
+  overflow: hidden;
+  background-color: #f2f0ff;
+  height: 76rem;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+}
+
+.slideContent {
+  margin-top: 20.3rem;
+  margin-left: -4.2rem;
+  text-align: start;
+  width: 75rem;
+}
+
+.slideContent h1 {
+  color: #101750;
+  font-weight: 700;
+  font-size: 5.2rem;
+}
+
+.slideContent p {
+  color: #8a8fb9;
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  max-width: 55rem;
+}
+
+.slideOffer {
+  position: relative;
+}
+
+.slideDiscount {
+  position: absolute;
+  top: 6rem;
+  left: 55.7rem;
+}
+
+p.highlighted {
+  color: #fb2e86;
+  font-family: "Lato", serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.slideButton {
+  background-color: #fb2e86;
+  display: block;
+  text-decoration: none;
+  padding: 1.6rem 4rem;
+  color: #ffffff;
+  width: 15.6rem;
+  height: 5.2rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 2.4rem;
+}
+
+.slideButton:hover {
+  background-color: #dc2876;
+}
+
+.slideLamp {
+  width: 38.7rem;
+  height: 38.7rem;
+  margin-left: 7rem;
+}
+
+.dots {
+  text-align: center;
+  margin-bottom: 4.4rem;
+}
+
+.dot {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin: 0 1.6rem;
+  background-color: transparent;
+  border: 1px solid #fb2e86;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.hover {
+  background-color: #fb2e86;
+}
+
+.dot.active {
+  background-color: #fb2e86;
+}

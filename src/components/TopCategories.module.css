@@ -1,0 +1,102 @@
+.topContainer {
+  position: relative;
+  width: 100%;
+  max-width: 192rem;
+  margin: auto;
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 76.6rem;
+}
+
+.topTitle {
+  text-align: center;
+  color: #101750;
+  font-weight: 700;
+  font-size: 4.4rem;
+}
+
+.tops {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.top {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  gap: 6.4rem;
+}
+
+.topContent:hover {
+  transform: translate(24px, -24px);
+}
+
+.topContent {
+  width: 27.2rem;
+  height: 37.2rem;
+  margin-top: 7.2rem;
+  transition: all 0.5s;
+}
+
+.details {
+  text-decoration: none;
+  width: 11.4rem;
+  height: 3.6rem;
+  margin-top: 19.1rem;
+  margin-left: 8.1rem;
+  position: absolute;
+  background-color: #0cc562;
+  color: #ffffff;
+  padding: 1.1rem 1.6rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.dots {
+  text-align: center;
+  margin-bottom: 10rem;
+  margin-top: 6rem;
+}
+
+.dot {
+  height: 0.8rem;
+  width: 0.8rem;
+  margin: 0 0.9rem;
+  background-color: transparent;
+  border: 1px solid #fb2e86;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+  border-radius: 100%;
+}
+
+.dot.active {
+  background-color: #fb2e86;
+}
+
+.image {
+  width: 27.2rem;
+  height: 27.2rem;
+  border-radius: 100%;
+}
+
+.title {
+  color: #101750;
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.details {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.topContent:hover .details {
+  visibility: visible;
+  opacity: 1;
+}

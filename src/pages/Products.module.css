@@ -1,0 +1,526 @@
+.pageTitle {
+  margin-top: 5.6rem;
+  color: #101750;
+  font-size: 5.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.navButtons {
+  margin-left: 88.8rem;
+  margin-top: 2.4rem;
+  display: flex;
+  width: 14.2rem;
+  justify-content: space-between;
+}
+
+.navButtons a {
+  color: #8a8fb9;
+  text-decoration: none;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.navButtons a:hover,
+.navButtons a:not(:first-child) {
+  color: #fb2e86;
+}
+
+.navButtons a:not(:first-child)::before {
+  margin: auto 1.6rem;
+  content: "•";
+  color: #d9d9d9;
+}
+
+.sortDropdowns {
+  display: flex;
+  margin-top: 8rem;
+  margin-left: 92.2rem;
+  color: #8a8fb9;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.perpageDropdown {
+  border: 1px solid #e5e0fc;
+  border-radius: 0.8rem;
+  width: 9.6rem;
+  height: 4rem;
+  background-color: transparent;
+  margin-left: 1.6rem;
+  color: #101750;
+  font-family: "Lato", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 1rem 1.6rem;
+  margin-right: 6.4rem;
+}
+
+.sortbyDropdown {
+  border: 1px solid #e5e0fc;
+  border-radius: 0.8rem;
+  width: 20.8rem;
+  height: 4rem;
+  background-color: transparent;
+  margin-left: 1.6rem;
+  color: #101750;
+  font-family: "Lato", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 1rem 1.6rem;
+}
+
+.contentContainer {
+  display: flex;
+  margin-top: 3.2rem;
+  width: 131.2rem;
+  gap: 17.2rem;
+  margin-left: 30.4rem;
+}
+
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  width: 16.4rem;
+}
+
+.selectFilter {
+  margin-bottom: 1.6rem;
+  color: #8a8fb9;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.gridRadioButton {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: 0.8rem;
+  position: absolute;
+  left: -0.5rem;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.gridRadioIcon {
+  margin-left: 7rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+}
+
+.gridRadioIcon svg {
+  margin-top: 0.8rem;
+  fill: none;
+}
+
+.gridRadioIcon:hover svg {
+  fill: #fb2e86;
+}
+
+.purpleHeart path {
+  fill: #7e33e0;
+}
+
+.redHeart path {
+  fill: red;
+}
+
+.gridRadioIcon:hover rect {
+  stroke: #fb2e86;
+}
+
+.flexRadioButton {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-top: 0.8rem;
+  position: absolute;
+  left: -0.5rem;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.flexRadioIcon {
+  margin-left: 1.6rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+}
+
+.flexRadioIcon svg {
+  margin-top: 0.8rem;
+  fill: none;
+}
+
+.flexRadioIcon:hover svg {
+  fill: #fb2e86;
+}
+
+.flexRadioIcon:hover rect {
+  stroke: #fb2e86;
+}
+
+.ratingFilter {
+  margin-bottom: 1.6rem;
+  color: #8a8fb9;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.filterLabel {
+  color: #101750;
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
+  margin-bottom: 2.3rem;
+}
+
+.filterOptions {
+  margin-top: 2.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.brandCheckbox {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #ddd6ff; /* Unchecked background */
+  border-radius: 0.4rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  top: 0.5rem;
+}
+
+.brandCheckbox:checked {
+  background-color: #603eff; /* Checked background */
+}
+
+.brandCheckbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 0.9rem;
+  height: 0.6rem;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+.brandCheckbox:focus {
+  outline: none;
+}
+
+.discountCheckbox,
+.categoryCheckbox,
+.priceCheckbox {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #feb9c4; /* Unchecked background */
+  border-radius: 0.4rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  top: 0.5rem;
+}
+
+.discountCheckbox:checked,
+.categoryCheckbox:checked,
+.priceCheckbox:checked {
+  background-color: #fb2e86; /* Checked background */
+}
+
+.discountCheckbox:checked::after,
+.categoryCheckbox:checked::after,
+.priceCheckbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 0.9rem;
+  height: 0.6rem;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+.discountCheckbox:focus,
+.categoryCheckbox:focus,
+.priceCheckbox:focus {
+  outline: none;
+}
+
+.ratingCheckbox {
+  appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: #fff3ce; /* Unchecked background */
+  border-radius: 0.4rem;
+  margin-right: 0.8rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  top: 0.5rem;
+}
+
+.ratingCheckbox:checked {
+  background-color: #f9ba00; /* Checked background */
+}
+
+.ratingCheckbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 0.9rem;
+  height: 0.6rem;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+}
+
+.ratingCheckbox:focus {
+  outline: none;
+}
+
+.productsContainer {
+  display: flex;
+  align-content: flex-start;
+  width: 97.6rem;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+
+.gridProduct {
+  text-decoration: none;
+  width: 30.4rem;
+  height: 44.8rem;
+  box-shadow: 8px 24px 32px -16px #10175026;
+  transition: all 0.5s;
+}
+
+.gridProduct:hover {
+  box-shadow: 8px 64px 80px -16px #10175026;
+  transform: translateY(-24px);
+}
+
+.flexProduct {
+  position: relative;
+  width: 97.6rem;
+  height: 23.2rem;
+  text-decoration: none;
+  box-shadow: 8px 24px 32px -16px #10175026;
+  transition: all 0.5s;
+}
+
+.flexProduct:hover {
+  box-shadow: 8px 64px 80px -16px #10175026;
+  transform: translateX(24px);
+}
+
+.gridProduct svg:first-child {
+  margin-left: 1.6rem;
+}
+
+.smallButton svg {
+  margin-left: 0rem !important;
+}
+
+.gridProduct .productImage {
+  width: 28.8rem;
+  height: 20rem;
+  border-radius: 0.4rem;
+  margin: 0.8rem;
+}
+
+.flexProduct .productImage {
+  float: left;
+  width: 28.8rem;
+  height: 20rem;
+  border-radius: 0.4rem;
+  margin: 1.6rem;
+}
+
+.gridProduct .productName {
+  color: #101750;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1.6rem;
+  margin-left: 1.6rem;
+}
+
+.flexProduct .productName {
+  display: inline-block;
+  color: #101750;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  margin-left: 1.6rem;
+}
+
+.flexProduct figure {
+  width: 12rem;
+  position: absolute;
+  top: 4rem;
+  left: 84rem;
+}
+
+.gridProduct .productPrices {
+  display: flex;
+  gap: 1.5rem;
+  width: 4.9rem;
+  margin-top: 0.8rem;
+  margin-left: 1.6rem;
+  height: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexProduct .productPrices {
+  display: flex;
+  gap: 1.5rem;
+  width: 4.9rem;
+  margin-top: 0.8rem;
+  margin-left: 3.2rem;
+  height: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gridProduct .productPrice {
+  color: #101750;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.flexProduct .productPrice {
+  color: #101750;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.gridProduct .productOldPrice {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: line-through;
+  color: #8a8fb9;
+}
+
+.flexProduct .productOldPrice {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: line-through;
+  color: #8a8fb9;
+}
+
+.gridProduct .productDescription {
+  margin-left: 1.6rem;
+  margin-top: 2.4rem;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 27.2rem;
+  color: #8a8fb9;
+}
+
+.flexProduct .productDescription {
+  margin-left: 3.2rem;
+  margin-top: 1.1rem;
+  font-family: "Lato", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 61.6remrem;
+  color: #8a8fb9;
+}
+
+.paginationButtonsContainer {
+  margin-top: 4.8rem;
+  margin-bottom: 10rem;
+  margin-left: 146.5rem;
+}
+
+.paginationButton {
+  border: none;
+  background-color: transparent;
+  color: #101750;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+.paginationButton:hover {
+  color: #ffffff;
+  background-color: #fc5fa2;
+}
+
+.gridProduct .smallButtons {
+  display: flex;
+  position: absolute;
+  width: 11.2rem;
+  margin: 0.8rem 0.8rem;
+}
+
+.flexProduct .smallButtons {
+  display: flex;
+  position: absolute;
+  left: 28rem;
+  top: 14rem;
+  width: 14.4rem;
+  margin-top: 3.7rem;
+  margin-left: 3.2rem;
+}
+
+.gridProduct .smallButton {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.flexProduct .smallButton {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-right: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.smallButton:hover {
+  background-color: #e5e0fc;
+}
+
+.checkboxStar {
+  margin-right: 0.8rem;
+}
+
+.error {
+  margin-top: 5.6rem;
+  color: #101750;
+  font-size: 5.2rem;
+  font-weight: 700;
+  text-align: center;
+}
