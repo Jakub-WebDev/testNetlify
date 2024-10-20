@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Slider.module.css";
 import lamp from "../assets/Lamp.png";
 import bigHeadphones from "../assets/BigHeadphones.png";
-import discount from "../assets/discount.png";
+import discount from "../assets/Discount.png";
 import { motion } from "framer-motion";
 
 export default function Slider() {
