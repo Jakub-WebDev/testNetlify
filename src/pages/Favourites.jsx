@@ -7,7 +7,11 @@ export default function Favourites() {
   const [favouritesProducts, setFavouritesProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://7ce9-195-191-163-209.ngrok-free.app/products")
+    fetch("https://6e00-37-128-119-106.ngrok-free.app/products", {
+      headers: {
+        "ngrok-skip-browser-warning": "true",
+      },
+    })
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching data:", error));

@@ -3,7 +3,12 @@ export const addToCart = async (product) => {
   try {
     // Fetch the current cart items
     const response = await fetch(
-      "https://7ce9-195-191-163-209.ngrok-free.app/cart"
+      "https://6e00-37-128-119-106.ngrok-free.app/cart",
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
     );
     const cartItems = await response.json();
 
@@ -15,10 +20,11 @@ export const addToCart = async (product) => {
     }
 
     // Add the product to the cart
-    await fetch("https://7ce9-195-191-163-209.ngrok-free.app/cart", {
+    await fetch("https://6e00-37-128-119-106.ngrok-free.app/cart", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "true",
       },
       body: JSON.stringify({ ...product, quantity: 1 }),
     });

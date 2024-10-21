@@ -5,7 +5,12 @@ export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
     const response = await fetch(
-      "https://7ce9-195-191-163-209.ngrok-free.app/products"
+      "https://6e00-37-128-119-106.ngrok-free.app/products",
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
     );
     if (!response.ok) {
       throw new Error("Failed to fetch products");

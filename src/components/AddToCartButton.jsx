@@ -7,7 +7,12 @@ const AddToCartButton = ({ product, className, children }) => {
     try {
       // Check if the product is already in the cart
       const response = await fetch(
-        `https://7ce9-195-191-163-209.ngrok-free.app/cart?id=${product.id}`
+        `https://6e00-37-128-119-106.ngrok-free.app/cart?id=${product.id}`,
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       const cartItems = await response.json();
 
@@ -27,16 +32,13 @@ const AddToCartButton = ({ product, className, children }) => {
       };
 
       // Post the new cart item to the server
-      const addResponse = await fetch(
-        "https://7ce9-195-191-163-209.ngrok-free.app/cart",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newCartItem),
-        }
-      );
+      const addResponse = await fetch("http://localhost:5000/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newCartItem),
+      });
 
       if (addResponse.ok) {
         alert("Product added to the cart successfully");

@@ -9,7 +9,12 @@ export default function Cart() {
 
   const fetchCartItems = async () => {
     const response = await fetch(
-      "https://7ce9-195-191-163-209.ngrok-free.app/cart"
+      "https://6e00-37-128-119-106.ngrok-free.app/cart",
+      {
+        headers: {
+          "ngrok-skip-browser-warning": "true",
+        },
+      }
     );
     const data = await response.json();
     setCartItems(data);
@@ -68,18 +73,22 @@ export default function Cart() {
   };
 
   const updateCartItem = async (id, quantity) => {
-    await fetch(`https://7ce9-195-191-163-209.ngrok-free.app/cart/${id}`, {
+    await fetch(`https://6e00-37-128-119-106.ngrok-free.app/cart/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
+        "ngrok-skip-browser-warning": "true",
       },
       body: JSON.stringify({ quantity }),
     });
   };
 
   const deleteCartItem = async (id) => {
-    await fetch(`https://7ce9-195-191-163-209.ngrok-free.app/cart/${id}`, {
+    await fetch(`https://6e00-37-128-119-106.ngrok-free.app/cart/${id}`, {
       method: "DELETE",
+      headers: {
+        "ngrok-skip-browser-warning": "true",
+      },
     });
   };
 
@@ -87,16 +96,24 @@ export default function Cart() {
     try {
       // Fetch all items currently in the cart
       const response = await fetch(
-        "https://7ce9-195-191-163-209.ngrok-free.app/cart"
+        "https://6e00-37-128-119-106.ngrok-free.app/cart",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       const cartItems = await response.json();
 
       // Loop through each cart item and send a DELETE request
       for (const item of cartItems) {
         await fetch(
-          `https://7ce9-195-191-163-209.ngrok-free.app/cart/${item.id}`,
+          `https://6e00-37-128-119-106.ngrok-free.app/cart/${item.id}`,
           {
             method: "DELETE",
+            headers: {
+              "ngrok-skip-browser-warning": "true",
+            },
           }
         );
       }
