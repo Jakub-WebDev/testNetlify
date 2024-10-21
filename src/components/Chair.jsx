@@ -1,4 +1,5 @@
 import chair from "../assets/Chair.png";
+import gradient from "../assets/Gradient.png";
 import styles from "./Chair.module.css";
 
 export default function Chair() {
@@ -56,6 +57,11 @@ export default function Chair() {
   return (
     <div className={styles.chairContainer}>
       <img className={styles.chairImage} src={chair} alt="chair image" />
+      <img
+        className={styles.gradientImage}
+        src={gradient}
+        alt="chair decoration"
+      />
       <div className={styles.chairContent}>
         <h1 className={styles.title}>
           Unique Features Of leatest & Trending Poducts{" "}

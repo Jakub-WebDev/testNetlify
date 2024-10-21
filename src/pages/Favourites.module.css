@@ -67,3 +67,21 @@
   text-decoration: line-through;
   margin-left: 1.5rem;
 }
+
+.emptyButton {
+  margin-top: 3.3rem;
+  width: 19.2rem;
+  height: 5.2rem;
+  padding: 1.75rem 3.8rem;
+  border-radius: 0.8rem;
+  background-color: #fb2e86;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 5rem;
+}
+
+.emptyButton:hover {
+  background-color: #e02978;
+}

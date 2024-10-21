@@ -47,9 +47,14 @@ export default function Favourites() {
             </Link>
           ))
         ) : (
-          <p className={styles.title}>
-            You don't have any favourite products yet.
-          </p> // Message displayed when no favourites
+          <>
+            <p className={styles.title}>
+              You don't have any favourite products yet.
+            </p>{" "}
+            <Link className={styles.emptyButton} to="/products">
+              Start Shopping
+            </Link>
+          </>
         )}
       </div>
     </div>
