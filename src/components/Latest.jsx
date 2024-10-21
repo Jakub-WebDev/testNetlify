@@ -93,7 +93,7 @@ export default function Latest() {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  handleFavouriteToggle(product.id);
+                  handleFavouriteToggle(product.id, e);
                 }}
                 className={styles.smallButton}
               >

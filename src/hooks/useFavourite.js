@@ -7,7 +7,8 @@ const useFavourite = () => {
   const dispatch = useDispatch();
   const { products: allProducts } = useProducts(); // Get products from useProducts
 
-  const handleFavouriteToggle = (id) => {
+  const handleFavouriteToggle = (id, e) => {
+    e.preventDefault();
     const product = allProducts.find((product) => product.id === id);
     if (!product) return;
 
