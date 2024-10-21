@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import Popup from "./Popup";
 
 const AddToCartButton = ({ product, className, children }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
+
+  const showPopup = (message) => {
+    setPopupMessage(message);
+    setIsPopupOpen(true);
+    setTimeout(() => setIsPopupOpen(false), 3000); // Auto-close after 3 seconds
+  };
+
   const addToCart = async (product, e) => {
     e.preventDefault();
 
@@ -17,8 +27,8 @@ const AddToCartButton = ({ product, className, children }) => {
       const cartItems = await response.json();
 
       if (cartItems.length > 0) {
-        // The product is already in the cart, do nothing
-        alert("Product is already in the cart");
+        // The product is already in the cart, show popup message
+        showPopup("Product is already in the cart");
         return;
       }
 
@@ -41,19 +51,27 @@ const AddToCartButton = ({ product, className, children }) => {
       });
 
       if (addResponse.ok) {
-        alert("Product added to the cart successfully");
+        showPopup("Product added to the cart successfully");
       } else {
-        alert("Failed to add product to the cart");
+        showPopup("Failed to add product to the cart");
       }
     } catch (error) {
       console.error("Error while adding product to the cart:", error);
+      showPopup("An error occurred while adding the product");
     }
   };
 
   return (
-    <button className={className} onClick={(e) => addToCart(product, e)}>
-      {children}
-    </button>
+    <>
+      <button className={className} onClick={(e) => addToCart(product, e)}>
+        {children}
+      </button>
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        message={popupMessage}
+      />
+    </>
   );
 };
 
